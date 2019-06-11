@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: spring-gateway
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://192.168.4.205:9411
+  rabbitmq:
+    host: 47.99.189.144
+    port: 5672
+    username: guest
+    password: guest
+
+
