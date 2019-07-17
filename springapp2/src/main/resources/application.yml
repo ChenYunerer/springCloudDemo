@@ -4,6 +4,25 @@ server:
 spring:
   application:
     name: spring-app
+  datasource:
+    druid:
+      url: jdbc:mysql://39.98.55.88:10030/score_reptile?useUnicode=true&characterEncoding=UTF-8
+      username: root
+      password: Qmkj@0622.
+      initialSize: 5
+      maxActive: 8
+      minIdle: 5
+      maxWait: 5000
+      useUnfairLock: true
+      validationQuery: select 'x'
+      validationQueryTimeout: 5000
+      testOnBorrow: false
+      testOnReturn: false
+      testWhileIdle: true
+      filters: stat, wall, slf4j
+      stat-view-servlet:
+        login-username: admin
+        login-password: admin
   sleuth:
     sampler:
       probability: 1.0
@@ -14,6 +33,11 @@ spring:
     port: 5672
     username: guest
     password: guest
+
+tx-lcn:
+  client:
+    manager-address: 127.0.0.1:9001
+
 
 
 
