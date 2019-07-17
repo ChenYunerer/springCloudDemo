@@ -6,7 +6,7 @@ spring:
     name: spring-app
   datasource:
     druid:
-      url: jdbc:mysql://39.98.55.88:10030/score_reptile?useUnicode=true&characterEncoding=UTF-8
+      url: jdbc:mysql://39.98.55.88:10030/microservice_db2?useUnicode=true&characterEncoding=UTF-8
       username: root
       password: Qmkj@0622.
       initialSize: 5
