@@ -5,7 +5,6 @@ import com.yun.springribbon.bean.TestBean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class RibbonController {
 
-    private static Logger log = LoggerFactory.getLogger(RibbonController.class);
+    private static final Logger log = LoggerFactory.getLogger(RibbonController.class);
 
     @Autowired
     private RestTemplate restTemplate;
@@ -28,7 +27,7 @@ public class RibbonController {
     @HystrixCommand(fallbackMethod = "ribbonError")
     @RequestMapping("/ribbon")
     public String ribbon(){
-        //log.info("Handling home");
+        log.info("Handling home");
         //ServiceInstance serviceInstance = loadBalancer.choose("SPRING-APP3");
         //return restTemplate.getForObject("http://spring-app3/test", String.class);
         //return serviceInstance.getPort() + "";

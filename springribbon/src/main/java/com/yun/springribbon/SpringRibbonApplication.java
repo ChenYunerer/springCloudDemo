@@ -9,6 +9,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 
 @EnableFeignClients
+@EnableHystrix
 @EnableCircuitBreaker
 @EnableEurekaClient
 @SpringBootApplication

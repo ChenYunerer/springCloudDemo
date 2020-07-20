@@ -6,9 +6,9 @@ spring:
     name: spring-app3
   datasource:
     druid:
-      url: jdbc:mysql://39.98.55.88:10030/microservice_db3?useUnicode=true&characterEncoding=UTF-8
+      url: jdbc:mysql://yuner.fun:3306/elms_elmsdb?useUnicode=true&characterEncoding=UTF-8
       username: root
-      password: Qmkj@0622.
+      password: 7996000000cy-6
       initialSize: 5
       maxActive: 8
       minIdle: 5
@@ -27,7 +27,7 @@ spring:
     sampler:
       probability: 1.0
   zipkin:
-    base-url: http://192.168.4.205:9411
+    base-url: http://yuner.fun:9411
   rabbitmq:
     host: 47.99.189.144
     port: 5672
